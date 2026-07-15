@@ -1,0 +1,66 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./index.html", "./src/**/*.{ts,tsx}"],
+  darkMode: "class",
+  theme: {
+    screens: {
+      tablet: "640px",
+      laptop: "1024px",
+      desktop: "1440px",
+    },
+    extend: {
+      colors: {
+        forest: { 500: "#2E4F3E", 900: "#16281F" },
+        sage: { 100: "#EDF1E7", 500: "#A3B18A", 700: "#6F7F5B" },
+        copper: { 400: "#C68A50", 500: "#B87333", 700: "#8C5626" },
+        ivory: { 25: "#F8F7F3", 50: "#F5F2EC" },
+        linen: { 50: "#F1EDE4" },
+        stone: { 200: "#F0EDE7", 300: "#DFDAD0", 400: "#B9B2A4", 500: "#8C8577" },
+        surface: "#EAE7E1",
+        ink: { 400: "#5F6B6D", 500: "#2C2C2C" },
+        twilight: { 100: "#E4EAF0", 500: "#42627D", 700: "#33506A" },
+        rosewood: { 100: "#EFDFDA" },
+        success: "#1F5C34",
+        warning: "#B08A2E",
+        error: "#A33A2F",
+        info: "#42627D",
+      },
+      fontFamily: {
+        "en-heading": ["Cormorant Garamond", "Georgia", "Times New Roman", "serif"],
+        "en-body": ["Inter", "-apple-system", "Helvetica Neue", "Arial", "sans-serif"],
+        "ar-heading": ["Thmanyah Serif Display", "Noto Serif Arabic", "serif"],
+        "ar-body": ["IBM Plex Sans Arabic", "Noto Sans Arabic", "sans-serif"],
+      },
+      fontSize: {
+        "display-1": "clamp(2.5rem, 5vw + 1rem, 4.5rem)",
+        "display-2": "clamp(2.125rem, 4vw + 1rem, 3.5rem)",
+        h1: "clamp(1.875rem, 3vw + 1rem, 2.75rem)",
+        h2: "clamp(1.75rem, 2.5vw + 1rem, 2.125rem)",
+        h3: "clamp(1.375rem, 1.5vw + 1rem, 1.625rem)",
+        h4: "clamp(1.25rem, 1vw + 1rem, 1.375rem)",
+        "body-lg": "clamp(1.0625rem, 0.5vw + 1rem, 1.1875rem)",
+        body: "clamp(0.9375rem, 0.5vw + 0.85rem, 1rem)",
+        "body-sm": "0.875rem",
+        label: ["0.8125rem", { letterSpacing: "0.08em" }],
+        "mono-detail": ["0.75rem", { letterSpacing: "0.04em" }],
+      },
+      spacing: {
+        18: "4.5rem",
+        30: "7.5rem",
+      },
+      borderRadius: { sm: "4px", md: "8px", lg: "16px" },
+      boxShadow: {
+        "card-hover": "0 4px 12px rgba(43,43,43,0.06)",
+        modal: "0 12px 32px rgba(43,43,43,0.14)",
+      },
+      maxWidth: { copy: "680px", section: "1200px", narrow: "720px" },
+      transitionDuration: { fast: "150ms", normal: "200ms", slow: "600ms", slower: "700ms" },
+      transitionTimingFunction: {
+        standard: "cubic-bezier(0.4, 0, 0.2, 1)",
+        emphasized: "cubic-bezier(0.16, 1, 0.3, 1)",
+      },
+      zIndex: { nav: "100", dropdown: "200", "modal-backdrop": "300", modal: "310", toast: "400" },
+    },
+  },
+  plugins: [],
+};
