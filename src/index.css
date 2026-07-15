@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700&family=Noto+Serif+Arabic:wght@500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: theme("colors.ivory.25");
+  color: theme("colors.ink.500");
+  font-family: theme("fontFamily.en-body");
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+html[dir="rtl"] body {
+  font-family: theme("fontFamily.ar-body");
+}
+
+html[dir="rtl"] .font-heading {
+  font-family: theme("fontFamily.ar-heading");
+}
+
+.font-heading {
+  font-family: theme("fontFamily.en-heading");
+}
+
+/* Focus visibility — never suppressed, per accessibility requirements */
+:focus-visible {
+  outline: 2px solid theme("colors.copper.500");
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::selection {
+  background-color: theme("colors.copper.400");
+  color: theme("colors.ivory.25");
+}

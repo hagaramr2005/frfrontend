@@ -1,0 +1,1 @@
+export { WhyPhronesis } from "./WhyPhronesis";
